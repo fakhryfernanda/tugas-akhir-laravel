@@ -4,8 +4,24 @@
 <section class="mb-20">
     <div class="container w-[1200px] mx-auto">
         <h1 class="text-3xl font-semibold mb-5">FORMULIR PENERIMAAN PESERTA DIDIK BARU TAHUN 2023/2024</h1>
-        <div x-show.transition="step != 'complete'">
+        <div>
             <div x-data="app()" x-cloak>
+                <div x-show.transition="step === 'complete'" class="p-10 text-center bg-white rounded-lg shadow">
+                    <i class="fa-solid fa-circle-check text-[72px] text-green-500"></i>
+                    <h2 class="text-2xl mb-4 text-gray-800 text-center font-bold">Pendaftaran Berhasil</h2>
+
+                    <p class="text-gray-600">
+                        Terima kasih sudah mendaftar. Data akan diverifikasi oleh petugas.
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        Pengumuman hasil PPDB dapat diakses pada <span class="font-semibold text-blue-400">16 Januari 2023</span>
+                    </p>
+
+                    <a href="/ppdb/hasil"
+                        class="w-fit block mx-auto py-2 px-5 rounded-lg shadow-sm text-center text-gray-600 bg-white hover:bg-gray-100 font-medium border" 
+                    >Lihat Data Pendaftaran</a>
+                </div>
+
                 <div x-show.transition="step != 'complete'" class="py-6 px-8 bg-white border">
                     <!-- Top Navigation -->
                     <div class="border-b-2 py-4 mb-12">
@@ -145,7 +161,7 @@
                 </div>
 
                 <!-- Bottom Navigation -->
-                <div class="py-4 px-8 bg-[#F7F7F7] border border-t-slate-300">
+                <div x-show="step != 'complete'" class="py-4 px-8 bg-[#F7F7F7] border border-t-slate-300">
                     <div class="flex justify-between" x-show="step != 'complete'">
                         <div class="w-1/2">
                             <button
@@ -171,7 +187,6 @@
                             >
                         </div>
                     </div>
-                    {{-- <input type="submit" value="Simpan Formulir Pendaftaran" class="block w-fit mx-auto p-2 bg-[#0F6FC7] text-white"> --}}
                 </div>
                 <!-- Bottom Navigation -->
             </div>
@@ -181,10 +196,6 @@
     function app() {
         return {
             step: 1, 
-            passwordStrengthText: '',
-            togglePassword: false,
-            password: '',
-            gender: 'Male',
         }
 	}
 </script>
