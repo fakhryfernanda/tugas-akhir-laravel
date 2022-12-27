@@ -4,10 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class RegistrationController extends Controller
+class PPDBController extends Controller
 {
     public function index()
     {
         return view('ppdb.index');
+    }
+
+    public function hasil()
+    {
+        return view('ppdb.hasil');
     }
 }
