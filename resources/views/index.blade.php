@@ -8,8 +8,8 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-sky-200">
-    <header class="bg-black/20 py-4">
+<body class="bg-sky-100">
+    <header class="bg-black/20 py-4 mb-10">
         <div class="w-[1200px] mx-auto container flex items-center">
             <div class="mr-32 flex items-center gap-3">
                 <img src="images/logo-11.jpg" alt="" width="40" class="inline">
@@ -21,12 +21,13 @@
                         <a href="/">BERANDA</a>
                     </li>
                     <li class="text-white">
-                        <a href="/pendaftaran">PPDB</a>
+                        <a href="/pendaftaran">PPDB 2023/2024</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-    @section('content')
+
+    @yield('content')
 </body>
 </html>
