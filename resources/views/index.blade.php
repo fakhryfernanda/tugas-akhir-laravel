@@ -8,11 +8,11 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-sky-100">
-    <header class="bg-black/20 py-4 mb-10">
+<body class="bg-[#F4F4F4]">
+    <header class="bg-sky-400 py-4 mb-10">
         <div class="w-[1200px] mx-auto container flex items-center">
             <div class="mr-32 flex items-center gap-3">
-                <img src="images/logo-11.jpg" alt="" width="40" class="inline">
+                <img src="images/logo-11.jpg" alt="logo" width="40" class="inline">
                 <span class="text-2xl font-bold text-white">SMAN 11 BEKASI</span>
             </div>
             <nav>
