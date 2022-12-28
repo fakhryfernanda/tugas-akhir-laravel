@@ -41,7 +41,15 @@
                                 </div>
 
                                 <div x-show="step === 4">
+                                    <div class="text-lg font-bold text-gray-700">Upload Berkas</div>
+                                </div>
+
+                                <div x-show="step === 5">
                                     <div class="text-lg font-bold text-gray-700">Data Orang Tua</div>
+                                </div>
+
+                                <div x-show="step === 6">
+                                    <div class="text-lg font-bold text-gray-700">Pernyataan</div>
                                 </div>
                             </div>
 
@@ -112,6 +120,14 @@
                                 <input type="date" id="tanggal_lahir" name="tanggal_lahir" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             <div class="flex items-center">
+                                <label for="tinggi_badan" class="block w-[800px]">Tinggi Badan (cm)</label>
+                                <input type="number" id="tinggi_badan" name="tinggi_badan" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                            </div>
+                            <div class="flex items-center">
+                                <label for="berat_badan" class="block w-[800px]">Berat Badan (kg)</label>
+                                <input type="number" id="berat_badan" name="berat_badan" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                            </div>
+                            <div class="flex items-center">
                                 <label for="agama" class="block w-[800px]">Agama</label>
                                 <select name="agama" id="agama" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                                     <option>Pilih :</option>
@@ -125,10 +141,26 @@
                                 </select>
                             </div>
                             <div class="flex items-center">
+                                <label for="kewarganegaraan" class="block w-[800px]">Kewarganegaraan</label>
+                                <select name="kewarganegaraan" id="kewarganegaraan" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                    <option>Pilih :</option>
+                                    <option value="wni">Warga Negara Indonesia (WNI)</option>
+                                    <option value="wna">Warga Negara Asing (WNA)</option>
+                                </select>
+                            </div>
+                            <div class="flex items-center">
+                                <label for="nomor_handphone" class="block w-[800px]">Nomor Handphone</label>
+                                <input type="text" id="nomor_handphone" name="nomor_handphone" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                            </div>
+                            <div class="flex items-center">
+                                <label for="email" class="block w-[800px]">Email Pribadi</label>
+                                <input type="email" id="email" name="email" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                            </div>
+                            <div class="flex items-center">
                                 <label for="foto" class="block w-[800px]">Foto</label>
                                 <div class="w-full">
                                     <input type="file" id="foto" name="foto">
-                                    <p class="mt-1 text-sm text-gray-400">Foto harus format JPG dan ukuran file maksimum 1 mb</p>
+                                    <p class="mt-1 text-sm text-gray-400">Foto harus format JPG/JPEG/PNG dan ukuran file maksimum 1 mb</p>
                                 </div>
                             </div>
                         </div>
@@ -153,15 +185,26 @@
                                 <label for="kode_pos" class="block w-[800px]">Kode Pos</label>
                                 <input type="text" id="kode_pos" name="kode_pos" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
-                            <div class="flex items-center">
-                                <p for="" class="block w-[800px]">Pernyataan</p>
-                                <div class="w-full">
-                                    <input type="checkbox" id="pernyataan" name="pernyataan" class="">
-                                    <label for="pernyataan">Saya menyatakan bahwa data yang tertera di atas adalah data yang sebenar-benarnya.</label>
-                                </div>
-                            </div>
                         </div>
                         <div x-show.transition.in="step === 4" class="flex flex-col gap-3">
+                            <div class="flex items-center">
+                                <label for="kis" class="block w-[800px]">Nomor Kartu Indonesia Sehat (KIS)</label>
+                                <input type="text" id="kis" name="kis" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                            </div>
+                            <div class="flex items-center">
+                                <label for="kip" class="block w-[800px]">Nomor Kartu Indonesia Pintar (KIP)</label>
+                                <input type="text" id="kip" name="kip" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                            </div>
+                            <div class="flex items-center">
+                                <label for="kks" class="block w-[800px]">Nomor Kartu Keluarga Sejahtera (KKS)</label>
+                                <input type="text" id="kks" name="kks" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                            </div>
+                            <div class="flex items-center">
+                                <label for="sktm" class="block w-[800px]">Nomor Surat Keterangan Tidak Mampu (SKTM)</label>
+                                <input type="text" id="sktm" name="sktm" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                            </div>
+                        </div>
+                        <div x-show.transition.in="step === 5" class="flex flex-col gap-3">
                             {{-- Ayah --}}
                             <p class="text-lg font-semibold">Ayah</p>
                             <div class="flex items-center">
@@ -324,6 +367,17 @@
                                 </select>
                             </div>
                         </div>
+                        <div x-show.transition.in="step === 6" class="flex flex-col gap-3">
+                            <div class="w-full">
+                                <label for="pernyataan" class="text-lg">
+                                    Saya menyatakan bahwa data yang tertera di atas adalah data yang sebenar-benarnya. Jika diketahui melakukan manipulasi data, saya siap untuk dikeluarkan dari status pendaftar. 
+                                </label>
+                                <div class="mt-2">
+                                    <input type="checkbox" id="pernyataan" name="pernyataan" class="">
+                                    <span class="font-semibold">Saya setuju</span>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </div>
 
@@ -362,8 +416,8 @@
 <script>
     function app() {
         return {
-            step: 4,
-            totalStep: 4
+            step: 6,
+            totalStep: 6
         }
 	}
 </script>
