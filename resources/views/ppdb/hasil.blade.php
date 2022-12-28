@@ -12,9 +12,7 @@
             </p>
         </div>
         <div class="p-4 shadow-md bg-white">
-            <p class="p-4 bg-[#D9EDF7] text-[#36829C]">
-                <span class="font-semibold">Informasi!</span> Silakan <a href="/ppdb/login" class="underline font-semibold">login</a> terlebih dahulu
-            </p>
+            <livewire:login /> 
         </div>
     </div>
 </section>
