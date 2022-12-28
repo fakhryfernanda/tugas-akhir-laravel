@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/e0f8177fe6.js" crossorigin="anonymous"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    @livewireStyles
 </head>
 <body class="bg-[#F4F4F4]">
     <header class="bg-sky-400 py-4 mb-10">
@@ -35,7 +36,8 @@
             </nav>
         </div>
     </header>
-
+    
     @yield('content')
+    @livewireScripts
 </body>
 </html>
