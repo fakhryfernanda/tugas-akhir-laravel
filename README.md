@@ -17,3 +17,7 @@
 16. kode_pos
 17. foto
 18. pernyataan
+
+## Catatan
+1. Jalur prestasi non akademik sementara tidak digunakan
+2. Nomor skhun sementara tidak digunakan
