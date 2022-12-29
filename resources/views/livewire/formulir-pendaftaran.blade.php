@@ -93,7 +93,7 @@
                             @error('sekolah_asal') <span class="text-red-500">{{ $message }}</span> @enderror
                             {{-- <div class="flex items-center">
                                 <label for="nomor_skhun" class="block w-[800px]">Nomor Seri SKHUN Sebelumnya</label>
-                                <input wire:model="" type"text" id="nomor_skhun" name="nomor_skhun" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300" placeholder="Nomor Seri Surat Keterangan Hasil Ujian Nasional">
+                                <input wire:model="" type="text" id="nomor_skhun" name="nomor_skhun" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300" placeholder="Nomor Seri Surat Keterangan Hasil Ujian Nasional">
                             </div> --}}
                             <div class="flex items-center">
                                 <label for="nomor_ijazah" class="block w-[800px]">Nomor Seri Ijazah Sebelumnya</label>
@@ -118,27 +118,27 @@
                             @error('jenis_kelamin') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="nisn" class="block w-[800px]">NISN</label>
-                                <input wire:model="nisn" type"text" id="nisn" name="nisn" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300" placeholder="Nomor Induk Siswa Nasional">
+                                <input wire:model="nisn" type="text" id="nisn" name="nisn" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300" placeholder="Nomor Induk Siswa Nasional">
                             </div>
                             @error('nisn') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="tempat_lahir" class="block w-[800px]">Tempat Lahir</label>
-                                <input wire:model="tempat_lahir" type"text" id="tempat_lahir" name="tempat_lahir" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="tempat_lahir" type="text" id="tempat_lahir" name="tempat_lahir" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('tempat_lahir') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="tanggal_lahir" class="block w-[800px]">Tanggal Lahir</label>
-                                <input wire:model="tanggal_lahir" type"date" id="tanggal_lahir" name="tanggal_lahir" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="tanggal_lahir" type="date" id="tanggal_lahir" name="tanggal_lahir" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('tanggal_lahir') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="tinggi_badan" class="block w-[800px]">Tinggi Badan (cm)</label>
-                                <input wire:model="tinggi_badan" type"number" id="tinggi_badan" name="tinggi_badan" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="tinggi_badan" type="number" id="tinggi_badan" name="tinggi_badan" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('tinggi_badan') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="berat_badan" class="block w-[800px]">Berat Badan (kg)</label>
-                                <input wire:model="berat_badan" type"number" id="berat_badan" name="berat_badan" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="berat_badan" type="number" id="berat_badan" name="berat_badan" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('berat_badan') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
@@ -166,23 +166,23 @@
                             @error('kewarganegaraan') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="nomor_handphone" class="block w-[800px]">Nomor Handphone</label>
-                                <input wire:model="nomor_handphone" type"text" id="nomor_handphone" name="nomor_handphone" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="nomor_handphone" type="text" id="nomor_handphone" name="nomor_handphone" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('nomor_handphone') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="email" class="block w-[800px]">Email Pribadi</label>
-                                <input wire:model="email" type"email" id="email" name="email" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="email" type="email" id="email" name="email" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('email') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="jumlah_saudara_kandung" class="block w-[800px]">Jumlah Saudara Kandung</label>
-                                <input wire:model="jumlah_saudara_kandung" type"number" id="jumlah_saudara_kandung" name="jumlah_saudara_kandung" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="jumlah_saudara_kandung" type="number" id="jumlah_saudara_kandung" name="jumlah_saudara_kandung" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('jumlah_saudara_kandung') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="foto" class="block w-[800px]">Foto</label>
                                 <div class="w-full">
-                                    <input wire:model="foto" type"file" id="foto" name="foto">
+                                    <input wire:model="foto" type="file" id="foto" name="foto">
                                     <p class="mt-1 text-sm text-gray-400">Foto harus format JPG/JPEG/PNG dan ukuran file maksimum 1 mb</p>
                                 </div>
                             </div>
@@ -196,43 +196,43 @@
                             @error('alamat_jalan') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="kelurahan" class="block w-[800px]">Kelurahan / Desa</label>
-                                <input wire:model="kelurahan" type"text" id="kelurahan" name="kelurahan" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="kelurahan" type="text" id="kelurahan" name="kelurahan" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('kelurahan') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="kecamatan" class="block w-[800px]">Kecamatan</label>
-                                <input wire:model="kecamatan" type"text" id="kecamatan" name="kecamatan" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="kecamatan" type="text" id="kecamatan" name="kecamatan" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('kecamatan') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="kota" class="block w-[800px]">Kabupaten / Kota</label>
-                                <input wire:model="kota" type"text" id="kota" name="kota" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="kota" type="text" id="kota" name="kota" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('kota') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="kode_pos" class="block w-[800px]">Kode Pos</label>
-                                <input wire:model="kode_pos" type"text" id="kode_pos" name="kode_pos" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="kode_pos" type="text" id="kode_pos" name="kode_pos" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                         </div>
                         <div x-show.transition.in="step === 4" class="flex flex-col gap-3">
                             <div class="flex items-center">
                                 <label for="kis" class="block w-[800px]">Nomor Kartu Indonesia Sehat (KIS)</label>
-                                <input wire:model="kis" type"text" id="kis" name="kis" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="kis" type="text" id="kis" name="kis" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('nis') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="kip" class="block w-[800px]">Nomor Kartu Indonesia Pintar (KIP)</label>
-                                <input wire:model="kip" type"text" id="kip" name="kip" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="kip" type="text" id="kip" name="kip" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('kip') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="kks" class="block w-[800px]">Nomor Kartu Keluarga Sejahtera (KKS)</label>
-                                <input wire:model="kks" type"text" id="kks" name="kks" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="kks" type="text" id="kks" name="kks" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('kks') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="sktm" class="block w-[800px]">Nomor Surat Keterangan Tidak Mampu (SKTM)</label>
-                                <input wire:model="sktm" type"text" id="sktm" name="sktm" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="sktm" type="text" id="sktm" name="sktm" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('sktm') <span class="text-red-500">{{ $message }}</span> @enderror
                         </div>
@@ -241,12 +241,12 @@
                             <p class="text-lg font-semibold">Ayah</p>
                             <div class="flex items-center">
                                 <label for="nama_ayah" class="block w-[800px]">Nama Ayah</label>
-                                <input wire:model="nama_ayah" type"text" id="nama_ayah" name="nama_ayah" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="nama_ayah" type="text" id="nama_ayah" name="nama_ayah" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('nama_ayah') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="tahun_lahir_ayah" class="block w-[800px]">Tahun Lahir Ayah</label>
-                                <input wire:model="tahun_lahir_ayah" type"text" id="tahun_lahir_ayah" name="tahun_lahir_ayah" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="tahun_lahir_ayah" type="text" id="tahun_lahir_ayah" name="tahun_lahir_ayah" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('tahun_lahir_ayah') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
@@ -300,12 +300,12 @@
                             <p class="text-lg font-semibold mt-4">Ibu</p>
                             <div class="flex items-center">
                                 <label for="nama_ibu" class="block w-[800px]">Nama Ibu</label>
-                                <input wire:model="nama_ibu" type"text" id="nama_ibu" name="nama_ibu" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="nama_ibu" type="text" id="nama_ibu" name="nama_ibu" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('nama_ibu') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="tahun_lahir_ibu" class="block w-[800px]">Tahun Lahir Ibu</label>
-                                <input wire:model="tahun_lahir_ibu" type"text" id="tahun_lahir_ibu" name="tahun_lahir_ibu" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="tahun_lahir_ibu" type="text" id="tahun_lahir_ibu" name="tahun_lahir_ibu" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('tahun_lahir_ibu') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
@@ -359,12 +359,12 @@
                             <p class="text-lg font-semibold mt-4">Wali</p>
                             <div class="flex items-center">
                                 <label for="nama_wali" class="block w-[800px]">Nama Wali</label>
-                                <input wire:model="nama_wali" type"text" id="nama_wali" name="nama_wali" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="nama_wali" type="text" id="nama_wali" name="nama_wali" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('nama_wali') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="tahun_lahir_wali" class="block w-[800px]">Tahun Lahir Wali</label>
-                                <input wire:model="tahun_lahir_wali" type"text" id="tahun_lahir_wali" name="tahun_lahir_wali" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="tahun_lahir_wali" type="text" id="tahun_lahir_wali" name="tahun_lahir_wali" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('tahun_lahir_wali') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
@@ -403,7 +403,7 @@
                             @error('pekerjaan_wali') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="penghasilan_bulanan_wali" class="block w-[800px]">Penghasilan Bulanan Wali</label>
-                                <select wire:model="penghasilan_wali" name="penghasilan_bulanan_wali" id="penghasilan_bulanan_wali" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <select wire:model="penghasilan_bulanan_wali" name="penghasilan_bulanan_wali" id="penghasilan_bulanan_wali" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                                     <option value="">Pilih :</option>
                                     <option value="penghasilan_1">Kurang dari Rp 1.000.000</option>
                                     <option value="penghasilan_2">Rp 1.000.000 - Rp 3.000.000</option>
@@ -418,146 +418,146 @@
                             <p class="text-lg font-semibold">Semester 1</p>
                             <div class="flex items-center">
                                 <label for="indo_1" class="block w-[800px]">Bahasa Indonesia</label>
-                                <input wire:model="indo_1" type"number" id="indo_1" name="indo_1" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="indo_1" type="number" id="indo_1" name="indo_1" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('indo_1') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="eng_1" class="block w-[800px]">Bahasa Inggris</label>
-                                <input wire:model="eng_1" type"number" id="eng_1" name="eng_1" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="eng_1" type="number" id="eng_1" name="eng_1" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('eng_1') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="mtk_1" class="block w-[800px]">Matematika</label>
-                                <input wire:model="mtk_1" type"number" id="mtk_1" name="mtk_1" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="mtk_1" type="number" id="mtk_1" name="mtk_1" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('mtk_1') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="ipa_1" class="block w-[800px]">IPA</label>
-                                <input wire:model="ipa_1" type"number" id="ipa_1" name="ipa_1" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="ipa_1" type="number" id="ipa_1" name="ipa_1" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('ipa_1') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="ips_1" class="block w-[800px]">IPS</label>
-                                <input wire:model="ips_1" type"number" id="ips_1" name="ips_1" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="ips_1" type="number" id="ips_1" name="ips_1" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('ips_1') <span class="text-red-500">{{ $message }}</span> @enderror
     
                             <p class="text-lg font-semibold mt-8">Semester 2</p>
                             <div class="flex items-center">
                                 <label for="indo_2" class="block w-[800px]">Bahasa Indonesia</label>
-                                <input wire:model="indo_2" type"number" id="indo_2" name="indo_2" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="indo_2" type="number" id="indo_2" name="indo_2" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('indo_2') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="eng_2" class="block w-[800px]">Bahasa Inggris</label>
-                                <input wire:model="eng_2" type"number" id="eng_2" name="eng_2" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="eng_2" type="number" id="eng_2" name="eng_2" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('eng_2') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="mtk_2" class="block w-[800px]">Matematika</label>
-                                <input wire:model="mtk_2" type"number" id="mtk_2" name="mtk_2" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="mtk_2" type="number" id="mtk_2" name="mtk_2" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('mtk_2') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="ipa_2" class="block w-[800px]">IPA</label>
-                                <input wire:model="ipa_2" type"number" id="ipa_2" name="ipa_2" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="ipa_2" type="number" id="ipa_2" name="ipa_2" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('ipa_2') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="ips_2" class="block w-[800px]">IPS</label>
-                                <input wire:model="ips_2" type"number" id="ips_2" name="ips_2" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="ips_2" type="number" id="ips_2" name="ips_2" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('ips_2') <span class="text-red-500">{{ $message }}</span> @enderror
     
                             <p class="text-lg font-semibold mt-8">Semester 3</p>
                             <div class="flex items-center">
                                 <label for="indo_3" class="block w-[800px]">Bahasa Indonesia</label>
-                                <input wire:model="indo_3" type"number" id="indo_3" name="indo_3" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="indo_3" type="number" id="indo_3" name="indo_3" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('indo_3') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="eng_3" class="block w-[800px]">Bahasa Inggris</label>
-                                <input wire:model="eng_3" type"number" id="eng_3" name="eng_3" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="eng_3" type="number" id="eng_3" name="eng_3" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('eng_3') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="mtk_3" class="block w-[800px]">Matematika</label>
-                                <input wire:model="mtk_3" type"number" id="mtk_3" name="mtk_3" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="mtk_3" type="number" id="mtk_3" name="mtk_3" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('mtk_3') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="ipa_3" class="block w-[800px]">IPA</label>
-                                <input wire:model="ipa_3" type"number" id="ipa_3" name="ipa_3" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="ipa_3" type="number" id="ipa_3" name="ipa_3" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('ipa_3') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="ips_3" class="block w-[800px]">IPS</label>
-                                <input wire:model="ips_3" type"number" id="ips_3" name="ips_3" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="ips_3" type="number" id="ips_3" name="ips_3" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('ips_3') <span class="text-red-500">{{ $message }}</span> @enderror
     
                             <p class="text-lg font-semibold mt-8">Semester 4</p>
                             <div class="flex items-center">
                                 <label for="indo_4" class="block w-[800px]">Bahasa Indonesia</label>
-                                <input wire:model="indo_4" type"number" id="indo_4" name="indo_4" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="indo_4" type="number" id="indo_4" name="indo_4" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('indo_4') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="eng_4" class="block w-[800px]">Bahasa Inggris</label>
-                                <input wire:model="eng_4" type"number" id="eng_4" name="eng_4" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="eng_4" type="number" id="eng_4" name="eng_4" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('eng_4') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="mtk_4" class="block w-[800px]">Matematika</label>
-                                <input wire:model="mtk_4" type"number" id="mtk_4" name="mtk_4" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="mtk_4" type="number" id="mtk_4" name="mtk_4" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('mtk_4') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="ipa_4" class="block w-[800px]">IPA</label>
-                                <input wire:model="ipa_4" type"number" id="ipa_4" name="ipa_4" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="ipa_4" type="number" id="ipa_4" name="ipa_4" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('ipa_4') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="ips_4" class="block w-[800px]">IPS</label>
-                                <input wire:model="ips_4" type"number" id="ips_4" name="ips_4" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="ips_4" type="number" id="ips_4" name="ips_4" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('ips_4') <span class="text-red-500">{{ $message }}</span> @enderror
     
                             <p class="text-lg font-semibold mt-8">Semester 5</p>
                             <div class="flex items-center">
                                 <label for="indo_5" class="block w-[800px]">Bahasa Indonesia</label>
-                                <input wire:model="indo_5" type"number" id="indo_5" name="indo_5" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="indo_5" type="number" id="indo_5" name="indo_5" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('indo_5') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="eng_5" class="block w-[800px]">Bahasa Inggris</label>
-                                <input wire:model="eng_5" type"number" id="eng_5" name="eng_5" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="eng_5" type="number" id="eng_5" name="eng_5" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('eng_5') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="mtk_5" class="block w-[800px]">Matematika</label>
-                                <input wire:model="mtk_5" type"number" id="mtk_5" name="mtk_5" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="mtk_5" type="number" id="mtk_5" name="mtk_5" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('mtk_5') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="ipa_5" class="block w-[800px]">IPA</label>
-                                <input wire:model="ipa_5" type"number" id="ipa_5" name="ipa_5" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="ipa_5" type="number" id="ipa_5" name="ipa_5" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('ipa_5') <span class="text-red-500">{{ $message }}</span> @enderror
                             <div class="flex items-center">
                                 <label for="ips_5" class="block w-[800px]">IPS</label>
-                                <input wire:model="ips_5" type"number" id="ips_5" name="ips_5" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input wire:model="ips_5" type="number" id="ips_5" name="ips_5" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             </div>
                             @error('ips_5') <span class="text-red-500">{{ $message }}</span> @enderror
                         </div>
                         <div x-show.transition.in="step === 7" class="flex flex-col gap-3">
                             <div class="w-full">
-                                <label for="pernyataan" class="text-lg">
+                                <p class="text-lg">
                                     Saya menyatakan bahwa data yang tertera di atas adalah data yang sebenar-benarnya. Jika diketahui melakukan manipulasi data, saya siap untuk dikeluarkan dari status pendaftar. 
-                                </label>
+                                </p>
                                 <div class="mt-2">
-                                    <input wire:model="" type"checkbox" id="pernyataan" name="pernyataan" class="">
-                                    <span class="font-semibold">Saya setuju</span>
+                                    <input type="checkbox" id="pernyataan" name="pernyataan" class="">
+                                    <label for="pernyataan" class="font-semibold">Saya setuju</label>
                                 </div>
                             </div>
                         </div>
@@ -586,7 +586,7 @@
                             <input
                                 type="submit"
                                 form="formulir"
-                                @click="step = 'complete'"
+                                {{-- @click="step = 'complete'" --}}
                                 x-show="step === totalStep"
                                 class="w-32 focus:outline-none border border-transparent py-2 px-5 rounded-lg shadow-sm text-center text-white bg-blue-500 hover:bg-blue-600 font-medium"
                                 value="Simpan"
