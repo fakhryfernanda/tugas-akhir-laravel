@@ -14,6 +14,9 @@
         <div class="p-4 shadow-md bg-white">
             <livewire:login /> 
         </div>
+        <div class="p-4 shadow-md bg-white">
+            <livewire:registrasi /> 
+        </div>
     </div>
 </section>
 @endsection
