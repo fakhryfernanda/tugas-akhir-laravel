@@ -182,7 +182,7 @@
                             <div class="flex items-center">
                                 <label for="foto" class="block w-[800px]">Foto</label>
                                 <div class="w-full">
-                                    <input wire:model="foto" type="file" id="foto" name="foto">
+                                    <input wire:model="foto" type="text" id="foto" name="foto">
                                     <p class="mt-1 text-sm text-gray-400">Foto harus format JPG/JPEG/PNG dan ukuran file maksimum 1 mb</p>
                                 </div>
                             </div>
@@ -586,9 +586,9 @@
                             <input
                                 type="submit"
                                 form="formulir"
-                                {{-- @click="step = 'complete'" --}}
+                                @click="step = 'complete'"
                                 x-show="step === totalStep"
-                                class="w-32 focus:outline-none border border-transparent py-2 px-5 rounded-lg shadow-sm text-center text-white bg-blue-500 hover:bg-blue-600 font-medium"
+                                class="w-32 focus:outline-none cursor-pointer border border-transparent py-2 px-5 rounded-lg shadow-sm text-center text-white bg-blue-500 hover:bg-blue-600 font-medium"
                                 value="Simpan"
                             >
                         </div>
