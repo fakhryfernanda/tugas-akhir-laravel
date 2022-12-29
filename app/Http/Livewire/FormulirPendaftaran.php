@@ -2,8 +2,10 @@
 
 namespace App\Http\Livewire;
 
-use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Http;
 use Livewire\Component;
+use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Validator;
 
 class FormulirPendaftaran extends Component
 {
@@ -98,6 +100,9 @@ class FormulirPendaftaran extends Component
         'tinggi_badan',
         'berat_badan',
         'jumlah_saudara_kandung',
+        'tahun_lahir_ayah',
+        'tahun_lahir_ibu',
+        'tahun_lahir_wali',
         'indo_1',
         'indo_2',
         'indo_3',
@@ -160,10 +165,12 @@ class FormulirPendaftaran extends Component
                 $this->messages[$attribute . '.required'] = 'Wajib Diisi';
             }
         }
+        $this->jenis_kelamin = 'P';
         $this->email = 'string@gmail.com';
+        $this->kode_pos = '17425';
 
         // Validasi untuk foto
-        $this->rules['foto'] = 'required|image|max:1024'; // 1MB Max
+        // $this->rules['foto'] = 'required|image|max:1024'; // 1MB Max
 
     }
     
@@ -174,21 +181,40 @@ class FormulirPendaftaran extends Component
  
     public function submit()
     {
-        $this->validate();
         $payload = [];
-
         foreach ($this->attributes as $attribute) {
             $payload[$attribute] = $this->$attribute;
         }
 
-        dd($payload);
+        $validator = Validator::make(
+            $payload,
+            $this->rules
+        );
+
+        // Jika validasi gagal
+        if ($validator->fails()) {
+            dd('gagal');
+        }
+
+        // Validasi berhasil
+        $this->validate();
+
+        // Kode di bawah ini gak akan jalan kalo validasinya gagal
         
-        // Execution doesn't reach here if validation fails.
- 
-        // Contact::create([
-        //     'name' => $this->name,
-        //     'email' => $this->email,
-        // ]);
+        // $path = $payload['foto']->getPathName();
+        // $fileName = $payload['foto']->getClientOriginalName();
+
+        // $response = Http::asMultipart()->attach(
+        //     'image', 
+        //     file_get_contents($path), 
+        //     $fileName
+        // )->post(
+        //     'http://127.0.0.1:8000/api/pendaftar/add',
+        //     $payload
+        // )->json();
+
+        // Foto dianggap teks dulu
+        $response = Http::post('http://127.0.0.1:8000/api/pendaftar/add', $payload);
     }
 
     public function render()
