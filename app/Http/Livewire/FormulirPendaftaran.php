@@ -2,15 +2,18 @@
 
 namespace App\Http\Livewire;
 
+use Livewire\WithFileUploads;
 use Livewire\Component;
 
 class FormulirPendaftaran extends Component
 {
+    use WithFileUploads;
+    
     public function __construct() {
         self::start();
     }
     
-    // Ada 65 atribut
+    // Ada 66 atribut
     public $attributes = [
         // Data Awal
         'jalur',
@@ -38,6 +41,7 @@ class FormulirPendaftaran extends Component
         'kelurahan',
         'kecamatan',
         'kota',
+        'kode_pos',
 
         // Berkas Pendukung
         'kis',
@@ -90,6 +94,37 @@ class FormulirPendaftaran extends Component
         'ips_5',
     ];
 
+    public $input_number = [
+        'tinggi_badan',
+        'berat_badan',
+        'jumlah_saudara_kandung',
+        'indo_1',
+        'indo_2',
+        'indo_3',
+        'indo_4',
+        'indo_5',
+        'eng_1',
+        'eng_2',
+        'eng_3',
+        'eng_4',
+        'eng_5',
+        'mtk_1',
+        'mtk_2',
+        'mtk_3',
+        'mtk_4',
+        'mtk_5',
+        'ipa_1',
+        'ipa_2',
+        'ipa_3',
+        'ipa_4',
+        'ipa_5',
+        'ips_1',
+        'ips_2',
+        'ips_3',
+        'ips_4',
+        'ips_5',
+    ];
+
     public $not_required = [
         'kis',
         'kip',
@@ -110,7 +145,11 @@ class FormulirPendaftaran extends Component
     {
         foreach ($this->attributes as $attribute) {
             // Buat atribut
-            $this->$attribute = null;
+            if (in_array($attribute, $this->input_number)) {
+                $this->$attribute = 100;
+            } else {
+                $this->$attribute = 'string';
+            }
             
             // Jika attribute tidak dalam array not_required
             if (!in_array($attribute, $this->not_required)) {
@@ -120,8 +159,12 @@ class FormulirPendaftaran extends Component
                 // Buat pesan error
                 $this->messages[$attribute . '.required'] = 'Wajib Diisi';
             }
-
         }
+        $this->email = 'string@gmail.com';
+
+        // Validasi untuk foto
+        $this->rules['foto'] = 'required|image|max:1024'; // 1MB Max
+
     }
     
     public function updated($propertyName)
@@ -132,7 +175,14 @@ class FormulirPendaftaran extends Component
     public function submit()
     {
         $this->validate();
- 
+        $payload = [];
+
+        foreach ($this->attributes as $attribute) {
+            $payload[$attribute] = $this->$attribute;
+        }
+
+        dd($payload);
+        
         // Execution doesn't reach here if validation fails.
  
         // Contact::create([
