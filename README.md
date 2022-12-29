@@ -20,4 +20,5 @@
 
 ## Catatan
 1. Jalur prestasi non akademik sementara tidak digunakan
-2. Nomor skhun sementara tidak digunakan
+2. Nomor SKHUN sementara tidak digunakan
+3. Tombol login dan registrasi belum terhubung secara langsung
