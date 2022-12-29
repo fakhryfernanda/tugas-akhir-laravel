@@ -32,49 +32,8 @@
             </div>
         </div>
     </section>
-    <section class="h-screen p-8">
-        <div class="shadow-md bg-white rounded-lg">
-            <table>
-                <thead>
-                    <tr class="bg-sky-600 text-white">
-                        <th class="py-2 px-4">Peringkat</th>
-                        <th class="py-2 px-4">NISN</th>
-                        <th class="py-2 px-4">Nama Lengkap</th>
-                        <th class="py-2 px-4">Jenis Kelamin</th>
-                        <th class="py-2 px-4">Tanggal Lahir</th>
-                        <th class="py-2 px-4">Asal Sekolah</th>
-                        <th class="py-2 px-4">Rata-Rata Nilai</th>
-                        <th class="py-2 px-4">Terverifikasi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="text-center">
-                        <td class="py-2 px-4">1.</td>
-                        <td class="py-2 px-4">10118096</td>
-                        <td class="py-2 px-4">Muhamad Fakhry Fernanda</td>
-                        <td class="py-2 px-4">L</td>
-                        <td class="py-2 px-4">2008-03-23</td>
-                        <td class="py-2 px-4">SMPN 24 Bekasi</td>
-                        <td class="py-2 px-4">8.75</td>
-                        <td class="py-2 px-4">
-                            <i class="fa-solid fa-check text-green-500"></i>
-                        </td>
-                    </tr>
-                    <tr class="text-center">
-                        <td class="py-2 px-4">2.</td>
-                        <td class="py-2 px-4">15161023</td>
-                        <td class="py-2 px-4">Maya Septa</td>
-                        <td class="py-2 px-4">P</td>
-                        <td class="py-2 px-4">2007-11-03</td>
-                        <td class="py-2 px-4">SMPN 182 Jakarta</td>
-                        <td class="py-2 px-4">8.55</td>
-                        <td class="py-2 px-4">
-                            <i class="fa-solid fa-xmark text-red-500"></i>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <section class="h-screen overflow-y-scroll p-8">
+        @livewire('admin.data-pendaftar')
     </section>
 </body>
 </html>
