@@ -249,7 +249,7 @@
                                 <option value="petani">Petani</option>
                                 <option value="peternak">Peternak</option>
                                 <option value="pns">PNS/TNI/POLRI</option>
-                                <option value="karyawa_swasta">Karyawan Swasta</option>
+                                <option value="karyawan_swasta">Karyawan Swasta</option>
                                 <option value="wiraswasta">Wiraswasta</option>
                                 <option value="wirausaha">Wirausaha</option>
                                 <option value="buruh">Buruh</option>
@@ -303,7 +303,7 @@
                                 <option value="petani">Petani</option>
                                 <option value="peternak">Peternak</option>
                                 <option value="pns">PNS/TNI/POLRI</option>
-                                <option value="karyawa_swasta">Karyawan Swasta</option>
+                                <option value="karyawan_swasta">Karyawan Swasta</option>
                                 <option value="wiraswasta">Wiraswasta</option>
                                 <option value="wirausaha">Wirausaha</option>
                                 <option value="buruh">Buruh</option>
@@ -357,7 +357,7 @@
                                 <option value="petani">Petani</option>
                                 <option value="peternak">Peternak</option>
                                 <option value="pns">PNS/TNI/POLRI</option>
-                                <option value="karyawa_swasta">Karyawan Swasta</option>
+                                <option value="karyawan_swasta">Karyawan Swasta</option>
                                 <option value="wiraswasta">Wiraswasta</option>
                                 <option value="wirausaha">Wirausaha</option>
                                 <option value="buruh">Buruh</option>
