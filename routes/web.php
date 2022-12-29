@@ -5,8 +5,11 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PPDBController;
 use App\Http\Controllers\AdminController;
+use App\Http\Livewire\FormulirPendaftaran;
 
 Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/formulir', FormulirPendaftaran::class);
 
 Route::get('/ppdb/informasi', [PPDBController::class, 'informasi']);
 Route::get('/ppdb/formulir', [PPDBController::class, 'formulir']);
