@@ -162,8 +162,8 @@
                             <input type="email" id="email" name="email" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                         </div>
                         <div class="flex items-center">
-                            <label for="saudara_kandung" class="block w-[800px]">Jumlah Saudara Kandung</label>
-                            <input type="number" id="saudara_kandung" name="saudara_kandung" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                            <label for="jumlah_saudara_kandung" class="block w-[800px]">Jumlah Saudara Kandung</label>
+                            <input type="number" id="jumlah_saudara_kandung" name="jumlah_saudara_kandung" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                         </div>
                         <div class="flex items-center">
                             <label for="foto" class="block w-[800px]">Foto</label>
