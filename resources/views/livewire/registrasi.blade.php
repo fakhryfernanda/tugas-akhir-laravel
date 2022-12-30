@@ -8,7 +8,7 @@
     >
         <!-- Trigger for Modal -->
         <p class="p-4 bg-[#D9EDF7] text-[#36829C]">
-            <span class="font-semibold">Informasi!</span> Silakan <button @click="showModalRegistration = true" class="underline font-semibold">registrasi</button> terlebih dahulu
+            <span class="font-semibold">Informasi!</span> Silakan <button @click="resetRegistration(); showModalRegistration = true;" class="underline font-semibold">registrasi</button> terlebih dahulu
         </p>
     
         <!-- Modal -->
@@ -25,7 +25,7 @@
                 x-transition:enter-end="opacity-100 scale-100"
             >
                 <template x-if="!isRegistered">
-                    <div class="h-[470px]">
+                    <div class="">
                         <!-- Title / Close-->
                         <div class="relative border-b">
                             <h5 class="pb-4 text-center text-xl font-semibold">Registrasi</h5>
@@ -75,6 +75,9 @@
                             <template x-if="passwordBox1 != passwordBox2">
                                 <p class="text-red-500 text-sm">Password tidak sama</p>
                             </template>
+                            <template x-if="error_message">
+                                <p x-text="error_message" class="text-red-500 text-sm"></p>
+                            </template>
                             <input @click="fetchRegister()" type="submit" value="Registrasi" class="py-2 text-white bg-orange-300 hover:bg-orange-400 rounded-md cursor-pointer">
                         </div>
                         <div class="mt-4 text-[13px] text-right">
@@ -88,9 +91,10 @@
                         </div>
                     </div>
                 </template>
-    
+
+                {{-- Tampilan setelah registrasi berhasil     --}}
                 <template x-if="isRegistered">
-                    <div class="h-[470px]">
+                    <div class="pb-8">
                         <!-- Title / Close-->
                         <div class="relative border-b">
                             <h5 class="pb-4 text-center text-xl font-semibold">Registrasi</h5>
@@ -103,7 +107,16 @@
                         <div class="mt-8 flex flex-col items-center">
                             <i class="fa-solid fa-circle-check text-[72px] text-green-500"></i>
                             <h2 class="mt-4 text-2xl mb-4 text-gray-800 text-center font-bold">Registrasi Berhasil</h2>
-                            <p>Nomor Pendaftaranmu <span x-text="data.data"></span></p>
+                            <p>Nomor pendaftaranmu adalah</p>
+                            <p x-text="response.data" class="py-1 text-lg font-medium"></p>
+                            <p>Simpan nomor tersebut dengan baik</p>
+                            <p class="mt-4">Silakan login untuk melanjutkan proses pendaftaran</p>
+                            <button
+                                @click="showModalRegistration = false; $store.login.showModalLogin = true;"
+                                class="mt-4 py-2 px-4 bg-green-500 hover:bg-green-600 text-white rounded-md"
+                            >
+                                Login
+                            </button>
                         </div>
     
     
