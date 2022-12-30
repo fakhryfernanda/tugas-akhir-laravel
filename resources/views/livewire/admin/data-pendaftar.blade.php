@@ -18,6 +18,15 @@
             
             Alpine.store('pendaftar', {
                 data: null,
+
+                async sortByKey(array, key)
+                {
+                    return array.sort(async function(a, b)
+                    {
+                        var x = await a[key]; var y = b[key]
+                        return ((x < y) ? -1 : ((x > y) ? 1 : 0))
+                    })
+                },
                 
                 getDataPendaftar()
                 {
@@ -25,9 +34,25 @@
                         .then(async (response) => {
                             this.data = await response.json()
                             this.data = this.data.data
+                            // this.data = sortByKey(this.data, 'nama_lengkap')
                     })
-                }
+                },
 
+                getMean(obj)
+                {
+                    var count = 0
+                    var sum = 0
+
+                    Object.keys(obj).forEach(key => {
+                        if (key != 'id_pendaftar') {
+                            count++
+                            sum += obj[key]
+                        }
+                    });
+
+                    mean = sum/count
+                    return mean
+                },
             })
         })
     </script>
@@ -38,10 +63,10 @@
     >
         
         <template x-if="data != null">
-        <table class="bg-white">
+        <table x-init="" class="bg-white">
             <thead>
                 <tr class="bg-sky-600 text-white">
-                    <th class="py-2 px-4">Peringkat</th>
+                    <th class="py-2 px-4">Nomor Urut</th>
                     <th class="py-2 px-4">NISN</th>
                     <th class="py-2 px-4">Nama Lengkap</th>
                     <th class="py-2 px-4">Jenis Kelamin</th>
@@ -60,7 +85,7 @@
                         <td x-text="row.jenis_kelamin" class="py-2 px-4"></td>
                         <td x-text="row.tanggal_lahir" class="py-2 px-4"></td>
                         <td x-text="data.data_awal[index].sekolah_asal" class="py-2 px-4"></td>
-                        <td class="py-2 px-4">10</td>
+                        <td x-text="getMean(data.nilai_rapor[index])" class="py-2 px-4"></td>
                         <td class="py-2 px-4">
                             <i class="fa-solid fa-xmark text-red-500"></i>
                         </td>
