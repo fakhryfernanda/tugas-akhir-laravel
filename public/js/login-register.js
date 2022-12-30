@@ -13,7 +13,8 @@ document.addEventListener('alpine:init', () => {
         'passwordBox2': '',
         'email': '',
         'nik': '',
-        'data': null,
+        'response': null,
+        'error_message': null,
 
         async fetchRegister() {
             if (this.passwordBox1 == this.passwordBox2) {
@@ -29,16 +30,32 @@ document.addEventListener('alpine:init', () => {
                 formData.append('email', this.email)
                 formData.append('password', this.passwordBox1)
 
-                console.log(formData)
-
                 const response = await fetch('http://127.0.0.1:8000/api/register', {
                     method: 'POST',
                     body: formData
                 })
 
-                this.data = await response.json()
-                this.isRegistered = true
+                this.response = await response.json()
+                console.log(this.response);
+
+                // Jika registrasi gagal
+                if (!this.response.status) {
+                    this.error_message = this.response.message
+                    console.log(this.error_message)
+                } else {
+                    this.isRegistered = true
+                }
             }
+        },
+
+        resetRegistration() {
+            this.isRegistered = false;
+            this.passwordBox1 = '';
+            this.passwordBox2 = '';
+            this.email = '';
+            this.nik = '';
+            this.response = '';
+            this.error_message = '';
         }
     })
 })
