@@ -1,7 +1,38 @@
 document.addEventListener('alpine:init', () => {
     Alpine.store('login', {
+        'baseUrl': window.location.origin,
+        'isLoggedIn': false,
         'showModalLogin': false,
-        'showPassword': false
+        'showPassword': false,
+        'nomor_pendaftaran': null,
+        'password': null,
+        'response': null,
+        'token': null,
+        async fetchLogin() {
+            if (this.nomor_pendaftaran != null && this.password != null) {
+                // fetch api
+                const formData = new FormData()
+                formData.append('nomor_pendaftaran', this.nomor_pendaftaran)
+                formData.append('password', this.password)
+
+                const response = await fetch('http://127.0.0.1:8000/api/login', {
+                    method: 'POST',
+                    body: formData
+                })
+
+                this.response = await response.json()
+
+                this.token = this.response.data.auth.token_type + ' ' + this.response.data.auth.token
+                
+                console.log(this.response)
+                console.log(this.token)
+
+                this.isLoggedIn = true
+                localStorage.setItem('token', this.token)
+                window.location.replace(this.baseUrl + '/')
+
+            }
+        }
     })
 
     Alpine.store('register', {
@@ -17,12 +48,7 @@ document.addEventListener('alpine:init', () => {
         'error_message': null,
 
         async fetchRegister() {
-            if (this.passwordBox1 == this.passwordBox2) {
-                const params = {
-                    nik: this.nik,
-                    email: this.email,
-                    password: this.passwordBox1
-                }
+            if (this.passwordBox1 == this.passwordBox2 && this.passwordBox1 != null && this.nik != null && this.email != null) {
 
                 // fetch api
                 const formData = new FormData()
@@ -36,7 +62,6 @@ document.addEventListener('alpine:init', () => {
                 })
 
                 this.response = await response.json()
-                console.log(this.response);
 
                 // Jika registrasi gagal
                 if (!this.response.status) {

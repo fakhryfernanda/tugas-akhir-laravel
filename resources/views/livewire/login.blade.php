@@ -35,21 +35,22 @@
     
                 <!-- content -->
                 <div>
-                    <form action="" class="mt-4 flex flex-col gap-3">
+                    {{-- Form tapi jadi div --}}
+                    <div class="mt-4 flex flex-col gap-3">
                         <div class="">
-                            <label for="nisn" class="">Nomor Pendaftaran</label>
-                            <input type="text" id="nisn" name="nisn" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                            <label for="nomor_pendaftaran" class="">Nomor Pendaftaran</label>
+                            <input x-model="nomor_pendaftaran" type="text" id="nomor_pendaftaran" name="nomor_pendaftaran" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                         </div>
                         <div class="">
                             <label for="password" class="">Password</label>
                             <div class="relative">
-                                <input :type="!showPassword ? 'password' : 'text'" id="password" name="password" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                                <input x-model="password" :type="!showPassword ? 'password' : 'text'" id="password" name="password" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                                 <i x-show="!showPassword" @click="showPassword = true" class="fa-solid fa-eye absolute right-2 top-1/2 -translate-y-1/2"></i>
                                 <i x-show="showPassword" @click="showPassword = false" class="fa-solid fa-eye-slash absolute right-2 top-1/2 -translate-y-1/2"></i>
                             </div>
                         </div>
-                        <input type="submit" value="Login" class="py-2 text-white bg-green-500 hover:bg-green-600 rounded-md cursor-pointer">
-                    </form>
+                        <input @click="fetchLogin()" value="Login" class="py-2 text-center text-white bg-green-500 hover:bg-green-600 rounded-md cursor-pointer">
+                    </div>
                 </div>
                 <div class="mt-4 text-[13px] text-right">
                     <span>Jika Anda belum memiliki akun, silakan klik tombol Registrasi berikut</span>
