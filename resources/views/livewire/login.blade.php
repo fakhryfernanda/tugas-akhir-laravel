@@ -55,7 +55,7 @@
                     <span>Jika Anda belum memiliki akun, silakan klik tombol Registrasi berikut</span>
                     {{-- Tutup modal login, buka modal registrasi --}}
                     <button 
-                        @click="showModalLogin = false; $store.register.showModalRegistration = true;" 
+                        @click="showModalLogin = false; $store.register.showModalRegistration = true; $store.register.resetRegistration();" 
                         class="py-1 px-2 bg-orange-300 hover:bg-orange-400 text-white rounded-sm"
                     >
                         Registrasi
