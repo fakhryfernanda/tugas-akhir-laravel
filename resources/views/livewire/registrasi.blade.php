@@ -6,9 +6,31 @@
         'showPasswordConfirmation': false,
         'passwordBox1': '',
         'passwordBox2': '',
-        passwordCheck(element) {
-            if (passwordBox1 != passwordBox2) {
-                element.innerHTML = 'Error'
+        'email': '',
+        'nik': '',
+        'data': null,
+        async fetchRegister() {
+            if (this.passwordBox1 == this.passwordBox2) {
+                const params = {
+                    nik: this.nik,
+                    email: this.email,
+                    password: this.passwordBox1
+                }
+
+                // fetch api
+                const formData = new FormData()
+                formData.append('nik', this.nik)
+                formData.append('email', this.email)
+                formData.append('password', this.passwordBox1)
+
+                console.log(formData)
+
+                const response = await fetch('http://127.0.0.1:8000/api/register', {
+                    method: 'POST',
+                    body: formData
+                })
+
+                this.data = await response.json()
             }
         }
     }"
@@ -43,14 +65,14 @@
 
             <!-- content -->
             <div>
-                <form action="" class="mt-4 flex flex-col gap-3">
+                <div class="mt-4 flex flex-col gap-3">
                     <div class="">
-                        <label for="nisn" class="">NIK</label>
-                        <input type="text" id="nisn" name="nisn" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                        <label for="nik" class="">NIK</label>
+                        <input x-model="nik" type="text" id="nik" name="nik" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                     </div>
                     <div class="">
                         <label for="email" class="">Email</label>
-                        <input type="email" id="email" name="email" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                        <input x-model="email" type="email" id="email" name="email" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                     </div>
                     <div class="">
                         <label for="password" class="">Password</label>
@@ -70,7 +92,7 @@
                         <label for="password_confirmation" class="">Masukkan Ulang Password</label>
                         <div class="relative">
                             <input
-                                x-model="passwordBox2" 
+                                x-model="passwordBox2"
                                 :type="!showPasswordConfirmation ? 'password' : 'text'" id="password_confirmation" 
                                 name="password_confirmation" 
                                 class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300"
@@ -82,8 +104,9 @@
                     <template x-if="passwordBox1 != passwordBox2">
                         <p class="text-red-500 text-sm">Password tidak sama</p>
                     </template>
-                    <input type="submit" value="Registrasi" class="py-2 text-white bg-orange-300 hover:bg-orange-400 rounded-md cursor-pointer">
-                </form>
+                    <input @click="fetchRegister()" type="submit" value="Registrasi" class="py-2 text-white bg-orange-300 hover:bg-orange-400 rounded-md cursor-pointer">
+                    <button>Click me</button>
+                </div>
             </div>
             <div class="mt-4">
                 <p class="text-[13px] text-right">
