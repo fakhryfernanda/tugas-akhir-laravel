@@ -32,7 +32,7 @@
             </div>
         </div>
     </section>
-    <section class="h-screen overflow-y-scroll p-8">
+    <section class="h-screen overflow-y-auto p-8">
         @livewire('admin.data-pendaftar')
     </section>
 </body>
