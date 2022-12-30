@@ -1,10 +1,17 @@
 <div
-    x-data="{
+    x-data=
+    "{
         'showModalRegistration': false,
         'showPassword': false,
-        'showPasswordConfirmation': false
+        'showPasswordConfirmation': false,
+        'passwordBox1': '',
+        'passwordBox2': '',
+        passwordCheck(element) {
+            if (passwordBox1 != passwordBox2) {
+                element.innerHTML = 'Error'
+            }
+        }
     }"
-    x-cloak
     @keydown.escape="showModalRegistration = false"
 >
     <!-- Trigger for Modal -->
@@ -48,7 +55,13 @@
                     <div class="">
                         <label for="password" class="">Password</label>
                         <div class="relative">
-                            <input :type="!showPassword ? 'password' : 'text'" id="password" name="password" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                            <input
+                                x-model="passwordBox1" 
+                                :type="!showPassword ? 'password' : 'text'" 
+                                id="password" 
+                                name="password" 
+                                class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300"
+                            >
                             <i x-show="!showPassword" @click="showPassword = true" class="fa-solid fa-eye absolute right-2 top-1/2 -translate-y-1/2"></i>
                             <i x-show="showPassword" @click="showPassword = false" class="fa-solid fa-eye-slash absolute right-2 top-1/2 -translate-y-1/2"></i>
                         </div>
@@ -56,11 +69,19 @@
                     <div class="">
                         <label for="password_confirmation" class="">Masukkan Ulang Password</label>
                         <div class="relative">
-                            <input :type="!showPasswordConfirmation ? 'password' : 'text'" id="password_confirmation" name="password_confirmation" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                            <input
+                                x-model="passwordBox2" 
+                                :type="!showPasswordConfirmation ? 'password' : 'text'" id="password_confirmation" 
+                                name="password_confirmation" 
+                                class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300"
+                            >
                             <i x-show="!showPasswordConfirmation" @click="showPasswordConfirmation = true" class="fa-solid fa-eye absolute right-2 top-1/2 -translate-y-1/2"></i>
                             <i x-show="showPasswordConfirmation" @click="showPasswordConfirmation = false" class="fa-solid fa-eye-slash absolute right-2 top-1/2 -translate-y-1/2"></i>
                         </div>
                     </div>
+                    <template x-if="passwordBox1 != passwordBox2">
+                        <p class="text-red-500 text-sm">Password tidak sama</p>
+                    </template>
                     <input type="submit" value="Registrasi" class="py-2 text-white bg-orange-300 hover:bg-orange-400 rounded-md cursor-pointer">
                 </form>
             </div>
