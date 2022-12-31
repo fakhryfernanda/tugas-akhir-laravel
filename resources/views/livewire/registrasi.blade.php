@@ -1,6 +1,5 @@
 <div>
-    <script src="{{ URL::to('js/login-register.js') }}"></script>
-
+    
     <div
         x-data="$store.register"
         
@@ -40,7 +39,7 @@
                                 <!-- content -->
                                 <div class="mt-4 flex flex-col gap-3">
                                     <div class="">
-                                        <label for="nik" class="">NIK</label>
+                                        <label for="nik" class="">NIK (Nomor Induk Kependudukan)</label>
                                         <input x-model="nik" type="text" id="nik" name="nik" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                                     </div>
                                     <div class="">
