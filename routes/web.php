@@ -1,19 +1,17 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PPDBController;
+use App\Http\Livewire\HasilPendaftaran;
 use App\Http\Controllers\AdminController;
-use App\Http\Livewire\FormulirPendaftaran;
 
-Route::get('/', [HomeController::class, 'index']);
+use App\Http\Livewire\Home;
+use App\Http\Livewire\HalamanPendaftaran;
+use App\Http\Livewire\InformasiPendaftaran;
 
-Route::get('/formulir', FormulirPendaftaran::class);
+Route::get('/', Home::class);
 
-Route::get('/ppdb/informasi', [PPDBController::class, 'informasi']);
-Route::get('/ppdb/formulir', [PPDBController::class, 'formulir']);
-Route::get('/ppdb/hasil', [PPDBController::class, 'hasil']);
-Route::get('/ppdb/login', [AuthController::class, 'login']);
+Route::get('/ppdb/formulir', HalamanPendaftaran::class);
+Route::get('/ppdb/informasi', InformasiPendaftaran::class);
+Route::get('/ppdb/hasil', HasilPendaftaran::class);
 
 Route::get('/admin', [AdminController::class, 'index']);
