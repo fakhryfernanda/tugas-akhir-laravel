@@ -25,11 +25,13 @@
                     <li class="text-white">
                         <div x-data="{ open:false }" @mouseleave="open = false" class="relative cursor-pointer">
                             <p @mouseover="open = true">PPDB 2023/2024</p>
-                            <div x-show="open" class="absolute top-6 w-[200px] shadow-md bg-gray-300">
-                                <a href="/ppdb/informasi" class="block w-full p-2 hover:bg-sky-200">Informasi Pendaftaran</a>
-                                <a href="/ppdb/formulir" class="block w-full p-2 hover:bg-sky-200">Isi Formulir</a>
-                                <a href="/ppdb/hasil" class="block w-full p-2 hover:bg-sky-200">Hasil Seleksi PPDB</a>
-                            </div>
+                            <template x-if="open">
+                                <div class="absolute top-6 w-[200px] shadow-md bg-gray-300">
+                                    <a href="/ppdb/informasi" class="block w-full p-2 hover:bg-sky-200">Informasi Pendaftaran</a>
+                                    <a href="/ppdb/formulir" class="block w-full p-2 hover:bg-sky-200">Isi Formulir</a>
+                                    <a href="/ppdb/hasil" class="block w-full p-2 hover:bg-sky-200">Hasil Seleksi PPDB</a>
+                                </div>
+                            </template>
                         </div>
                     </li>
                 </ul>
