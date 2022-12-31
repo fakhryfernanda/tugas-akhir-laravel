@@ -1,9 +1,10 @@
 <div>
     <script src="{{ URL::to('js/login-register.js') }}"></script>
-    <section class="mb-20" x-data="$store" x-init="login.checkSession()">
+    <section class="mb-20" x-cloak x-data="$store" x-init="login.checkSession()">
         <div class="container w-[1200px] mx-auto">
-            <template x-if="login.isLoggedIn">
-                <div>
+            {{-- Fungsi livewire prevent gak bisa jalan kalo pake tag template --}}
+            {{-- <template x-if="login.isLoggedIn"> --}}
+                <div x-show="login.isLoggedIn">
                     <h1 class="text-3xl font-semibold mb-5">FORMULIR PAKE LIVEWIRE</h1>
                     <div x-data="app()">
                         <div x-show.transition="step === 'complete'" class="p-10 text-center bg-white rounded-lg shadow">
@@ -68,7 +69,7 @@
                             <!-- /Top Navigation -->
             
                             {{-- Content --}}
-                            <form action="" method="post" id="formulir" wire:submit.prevent="submit" enctype="multipart/form-data">
+                            <form action="" method="post" id="formulir" wire:submit.prevent="cekcek" enctype="multipart/form-data">
                                 <div x-show.transition.in="step === 1" class="flex flex-col gap-3">
                                     <div class="flex items-center">
                                         <label for="jalur" class="block w-[800px]">Jalur Pendaftaran</label>
@@ -599,9 +600,9 @@
                         <!-- Bottom Navigation -->
                     </div>
                 </div>
-            </template>
-            <livewire:login /> 
-            <livewire:registrasi />
+            {{-- </template> --}}
+            @livewire('login')
+            @livewire('registrasi')
         </div>
     </section>
     

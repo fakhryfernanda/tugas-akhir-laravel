@@ -171,16 +171,20 @@ class FormulirPendaftaran extends Component
 
         // Validasi untuk foto
         // $this->rules['foto'] = 'required|image|max:1024'; // 1MB Max
-
     }
     
     public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
     }
+
+    public function cekcek() {
+        dd('aneh');
+    }
  
     public function submit()
     {
+        dd('aneh');
         $payload = [];
         foreach ($this->attributes as $attribute) {
             $payload[$attribute] = $this->$attribute;
@@ -196,6 +200,7 @@ class FormulirPendaftaran extends Component
             dd('gagal');
         }
 
+        dd($payload);
         // Validasi berhasil
         $this->validate();
 
