@@ -10,9 +10,9 @@ document.addEventListener('alpine:init', () => {
         'token': null,
 
         checkSession() {
-            this.isLoggedIn ? console.log('Masuk') : console.log('Belum masuk')
             const token = localStorage.getItem('token')
             this.isLoggedIn = token ? true : false
+            this.isLoggedIn ? console.log('Sudah masuk') : console.log('Belum masuk')
         },
 
         async fetchLogin() {
