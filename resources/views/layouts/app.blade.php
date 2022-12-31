@@ -8,6 +8,9 @@
     <script src="https://kit.fontawesome.com/e0f8177fe6.js" crossorigin="anonymous"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
     @livewireStyles
 </head>
 <body class="bg-[#F4F4F4]">
@@ -37,8 +40,11 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    </header>    
+
     {{ $slot }}
+
+    <script src="{{ URL::to('js/login-register.js') }}"></script>
     
     @livewireScripts
 </body>
