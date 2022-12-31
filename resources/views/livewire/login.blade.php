@@ -1,5 +1,4 @@
 <div>
-    <script src="{{ URL::to('js/login-register.js') }}"></script>
 
     <div
         x-data="$store.login"
@@ -9,7 +8,7 @@
             <div class="p-4 shadow-md bg-white">
                 <!-- Trigger for Modal -->
                 <p class="p-4 bg-[#D9EDF7] text-[#36829C]">
-                    <span class="font-semibold">Informasi!</span> Silakan <button @click="showModalLogin = true" class="underline font-semibold">login</button> terlebih dahulu
+                    Kamu belum login. Silakan <button @click="showModalLogin = true" class="underline font-semibold">login</button> terlebih dahulu
                 </p>
 
                 <!-- Modal -->
