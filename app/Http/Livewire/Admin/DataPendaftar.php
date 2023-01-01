@@ -8,6 +8,6 @@ class DataPendaftar extends Component
 {
     public function render()
     {
-        return view('livewire.admin.data-pendaftar');
+        return view('livewire.admin.data-pendaftar')->layout('admin.index');
     }
 }
