@@ -23,7 +23,7 @@
             </p>
         </div>
         @livewire('halaman-pendaftaran.detail-pendaftar')
-        <livewire:login /> 
-        <livewire:registrasi />
+        @livewire('login')
+        @livewire('registrasi')
     </div>
 </section>
