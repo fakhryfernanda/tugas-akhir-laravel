@@ -15,8 +15,15 @@ document.addEventListener('alpine:init', () => {
             this.isLoggedIn ? console.log('Sudah masuk') : console.log('Belum masuk')
         },
 
+        getActiveUserId() {
+            const user_id = localStorage.getItem('user_id')
+            console.log(user_id)
+            return user_id
+        },
+
         logout() {
-            localStorage.setItem('token', '')
+            localStorage.removeItem('token')
+            localStorage.removeItem('user_id')
             this.token = null
             window.location.replace(window.location.href)
         },
@@ -36,12 +43,15 @@ document.addEventListener('alpine:init', () => {
                 this.response = await response.json()
 
                 this.token = this.response.data.auth.token_type + ' ' + this.response.data.auth.token
+                const user_id = this.response.data.user.id
                 
-                console.log(this.response)
-                console.log(this.token)
+                // console.log(this.response)
+                // console.log(this.token)
 
                 this.isLoggedIn = true
                 localStorage.setItem('token', this.token)
+                localStorage.setItem('user_id', user_id)
+                
                 window.location.replace(this.baseUrl + '/ppdb/formulir')
 
             }
