@@ -55,6 +55,8 @@
     {{ $slot }}
 
     <script src="{{ URL::to('js/login-register.js') }}"></script>
+    <script src="{{ URL::to('js/data-pendaftar.js') }}"></script>
+    
     
     @livewireScripts
 </body>
