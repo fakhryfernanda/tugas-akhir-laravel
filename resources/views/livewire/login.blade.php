@@ -49,7 +49,7 @@
                                         <i x-show="showPassword" @click="showPassword = false" class="fa-solid fa-eye-slash absolute right-2 top-1/2 -translate-y-1/2"></i>
                                     </div>
                                 </div>
-                                <input @click="fetchLogin()" value="Login" class="py-2 text-center text-white bg-green-500 hover:bg-green-600 rounded-md cursor-pointer">
+                                <input @click="fetchLogin()" type="submit" value="Login" class="py-2 text-center text-white bg-green-500 hover:bg-green-600 rounded-md cursor-pointer">
                             </div>
                         </div>
                         <div class="mt-4 text-[13px] text-right">
