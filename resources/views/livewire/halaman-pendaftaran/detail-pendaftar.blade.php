@@ -1,8 +1,4 @@
-<div 
-    x-data="$store.pendaftar"
-    x-init="getDetailPendaftar('user');" 
-    class="flex justify-between"
->
+<div class="flex justify-between">
 
     {{-- Foto --}}
     <div class="w-fit h-fit p-2 bg-white rounded-md shadow-md border border-slate-300">
@@ -10,61 +6,61 @@
     </div>
 
     <div class="flex flex-col">
-        <div class="flex gap-5">
+        <div class="flex gap-3">
             {{-- Data Diri --}}
             <div class="shadow-md bg-white mb-6 rounded-md">
                 <h2 class="p-4 text-xl text-white font-semibold bg-[#3174AE] rounded-t-md">Data Diri</h2>
                 <div class="">
                     <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px] flex-shrink-0">Nama Lengkap</div>
-                        <div class="w-[200px]" x-text="detail.nama_lengkap"></div>
+                        <div class="w-[230px]" x-text="detail.nama_lengkap"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Jenis Kelamin</div>
-                        <div class="w-[200px]" x-text="detail.jenis_kelamin == 'L' ? 'Laki-laki' : 'Perempuan'"></div>
+                        <div class="w-[230px]" x-text="detail.jenis_kelamin == 'L' ? 'Laki-laki' : 'Perempuan'"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">NISN</div>
-                        <div class="w-[200px]" x-text="detail.nisn"></div>
+                        <div class="w-[230px]" x-text="detail.nisn"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Tempat Lahir</div>
-                        <div class="w-[200px]" x-text="detail.tempat_lahir"></div>
+                        <div class="w-[230px]" x-text="detail.tempat_lahir"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Tanggal Lahir</div>
-                        <div class="w-[200px]" x-text="detail.tanggal_lahir"></div>
+                        <div class="w-[230px]" x-text="detail.tanggal_lahir"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Tinggi Badan</div>
-                        <div class="w-[200px]" x-text="detail.tinggi_badan + ' cm'"></div>
+                        <div class="w-[230px]" x-text="detail.tinggi_badan + ' cm'"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Berat Badan</div>
-                        <div class="w-[200px]" x-text="detail.berat_badan + ' kg'"></div>
+                        <div class="w-[230px]" x-text="detail.berat_badan + ' kg'"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Agama</div>
-                        <div class="w-[200px] capitalize" x-text="detail.agama"></div>
+                        <div class="w-[230px] capitalize" x-text="detail.agama"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Kewarganegaraan</div>
                         <div 
-                            class="w-[200px]" 
+                            class="w-[230px]" 
                             x-text="detail.kewarganegaraan == 'wni' ? 'Warga Negara Indonesia' : 'Warga Negara Asing'"
                         ></div>
                     </div>
                     <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Nomor Handphone</div>
-                        <div class="w-[200px]" x-text="detail.nomor_handphone"></div>
+                        <div class="w-[230px]" x-text="detail.nomor_handphone"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Email</div>
-                        <div class="w-[200px]" x-text="detail.email"></div>
+                        <div class="w-[230px]" x-text="detail.email"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#ffffff] flex gap-4 rounded-b-md">
                         <div class="font-bold w-[200px]">Jumlah Saudara Kandung</div>
-                        <div class="w-[200px]" x-text="detail.jumlah_saudara_kandung"></div>
+                        <div class="w-[230px]" x-text="detail.jumlah_saudara_kandung"></div>
                     </div>
                 </div>
             </div>
