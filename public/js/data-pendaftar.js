@@ -2,6 +2,7 @@ document.addEventListener('alpine:init', () => {
             
     Alpine.store('pendaftar', {
         data: null,
+        detail: null,
 
         async sortByKey(array, key)
         {
@@ -18,24 +19,21 @@ document.addEventListener('alpine:init', () => {
                 .then(async (response) => {
                     this.data = await response.json()
                     this.data = this.data.data
-                    // this.data = sortByKey(this.data, 'nama_lengkap')
             })
         },
 
-        getMean(obj)
-        {
-            var count = 0
-            var sum = 0
+        getDetailPendaftar(location) {
+            if (location == 'user') {
+                const user_id = localStorage.getItem('user_id')
+                
+                fetch('http://127.0.0.1:8000/api/pendaftar/detail/' + user_id)
+                    .then(async (response) => {
+                        this.detail = await response.json()
+                        this.detail = this.detail.data
+                })
+            }
 
-            Object.keys(obj).forEach(key => {
-                if (key != 'id_pendaftar') {
-                    count++
-                    sum += obj[key]
-                }
-            });
-
-            mean = sum/count
-            return mean
-        },
+        }
     })
+
 })
