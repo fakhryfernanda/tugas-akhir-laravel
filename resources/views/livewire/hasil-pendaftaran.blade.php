@@ -147,6 +147,215 @@
                         </div>
                     </div>
                 </div>
+                <div class="shadow-md bg-white mb-6 rounded-md">
+                    <h2 class="p-4 text-xl text-white font-semibold bg-[#3174AE] rounded-t-md">Data Awal</h2>
+                    <div class="">
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Jalur</div>
+                            <div class="">Akademik</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px]">Jurusan</div>
+                            <div class="">IPA</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px]">Sekolah Asal</div>
+                            <div class="">SMPN 24 Bekasi</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4 rounded-b-md">
+                            <div class="font-bold w-[250px]">Nomor Ijazah</div>
+                            <div class="">DN-62 DI-6130664</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shadow-md bg-white mb-6 rounded-md">
+                    <h2 class="p-4 text-xl text-white font-semibold bg-[#3174AE] rounded-t-md">Data Orang Tua</h2>
+                    <div class="">
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Nama Ayah</div>
+                            <div class="">William Shaking Pear</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px]">Tahun Lahir Ayah</div>
+                            <div class="">1983</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px]">Pendidikan Ayah</div>
+                            <div class="">S2</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px]">Pekerjaan Ayah</div>
+                            <div class="">PNS /TNI/POLRI</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px]">Penghasilan Bulanan Ayah</div>
+                            <div class="">Lebih dari Rp 10.000.000</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Nama Ibu</div>
+                            <div class="">Hermione Granger</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px]">Tahun Lahir Ibu</div>
+                            <div class="">1986</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px]">Pendidikan Ibu</div>
+                            <div class="">S1</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px]">Pekerjaan Ibu</div>
+                            <div class="">Tidak bekerja</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px]">Penghasilan Bulanan Ibu</div>
+                            <div class="">Rp 5.000.000 - Rp 10.000.000</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Nama Wali</div>
+                            <div class="">-</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px]">Tahun Lahir Wali</div>
+                            <div class="">-</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px]">Pendidikan Wali</div>
+                            <div class="">-</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px]">Pekerjaan Wali</div>
+                            <div class="">-</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4 rounded-b-md">
+                            <div class="font-bold w-[250px]">Penghasilan Bulanan Wali</div>
+                            <div class="">-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-[400px] shadow-md bg-white mb-6 rounded-md">
+                    <h2 class="p-4 text-xl text-white font-semibold bg-[#3174AE] rounded-t-md">Nilai Rapor</h2>
+                    <div class="">
+                        <h3 class="text-lg font-bold py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">Semester 1</h3>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Bahasa Indonesia</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Bahasa Inggris</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Matematika</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Ilmu Pengetahuan Alam</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Ilmu Pengetahuan Sosial</div>
+                            <div class="">100</div>
+                        </div>
+                        
+                    </div>
+                    <div class="">
+                        <h3 class="text-lg font-bold py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">Semester 2</h3>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Bahasa Indonesia</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Bahasa Inggris</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Matematika</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Ilmu Pengetahuan Alam</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Ilmu Pengetahuan Sosial</div>
+                            <div class="">100</div>
+                        </div>
+                        
+                    </div>
+                    <div class="">
+                        <h3 class="text-lg font-bold py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">Semester 3</h3>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Bahasa Indonesia</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Bahasa Inggris</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Matematika</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Ilmu Pengetahuan Alam</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Ilmu Pengetahuan Sosial</div>
+                            <div class="">100</div>
+                        </div>
+                        
+                    </div>
+                    <div class="">
+                        <h3 class="text-lg font-bold py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">Semester 4</h3>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Bahasa Indonesia</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Bahasa Inggris</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Matematika</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Ilmu Pengetahuan Alam</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Ilmu Pengetahuan Sosial</div>
+                            <div class="">100</div>
+                        </div>
+                        
+                    </div>
+                    <div class="">
+                        <h3 class="text-lg font-bold py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">Semester 5</h3>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Bahasa Indonesia</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Bahasa Inggris</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Matematika</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
+                            <div class="font-bold w-[250px] flex-shrink-0">Ilmu Pengetahuan Alam</div>
+                            <div class="">100</div>
+                        </div>
+                        <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4 rounded-b-md">
+                            <div class="font-bold w-[250px] flex-shrink-0">Ilmu Pengetahuan Sosial</div>
+                            <div class="">100</div>
+                        </div>
+                        
+                    </div>
+                </div>
             </div>
         </div>
         <livewire:login /> 
