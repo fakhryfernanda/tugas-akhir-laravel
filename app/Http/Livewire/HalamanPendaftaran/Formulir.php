@@ -3,9 +3,9 @@
 namespace App\Http\Livewire\HalamanPendaftaran;
 
 use Livewire\Component;
+use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Validator;
-use Livewire\WithFileUploads;
 
 class Formulir extends Component
 {
@@ -17,6 +17,8 @@ class Formulir extends Component
     
     // Ada 66 atribut
     public $attributes = [
+        'id_akun',
+        
         // Data Awal
         'jalur',
         'jurusan',
@@ -150,8 +152,12 @@ class Formulir extends Component
     // Untuk menyiapkan property
     protected function start()
     {
+        // Session::put('fakhry' , 'cakep');
+        // dd(Session::get('fakhry'));
         // Buat data dummy di form
         if ($this->autofill){
+            $this->id_akun = null;
+
             // Data Awal
             $this->jalur = 'akademik';
             $this->jurusan = 'ipa';
@@ -295,7 +301,6 @@ class Formulir extends Component
 
         // Foto dianggap teks dulu
         $response = Http::post('http://127.0.0.1:8000/api/pendaftar/add', $payload);
-        // dd($payload);
         return redirect('/ppdb/hasil')->with('success', 'Pendaftaran Berhasil');
     }
 
