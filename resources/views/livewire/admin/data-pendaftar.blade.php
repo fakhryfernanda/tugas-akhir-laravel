@@ -1,5 +1,3 @@
-<script src="{{ URL::to('js/admin-dashboard.js') }}"></script>
-
 <div 
     x-data="$store.pendaftar"
     x-init="getDataPendaftar();"

@@ -35,5 +35,7 @@
     <section class="h-screen overflow-y-auto p-8">
         @livewire('admin.data-pendaftar')
     </section>
+
+    <script src="{{ URL::to('js/data-pendaftar.js') }}"></script>
 </body>
 </html>
