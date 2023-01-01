@@ -1,4 +1,20 @@
 document.addEventListener('alpine:init', () => {
+    Alpine.store('dataDiri', {
+        'isExisted': false,
+        getDataDiri() {
+            const user_id = localStorage.getItem('user_id')
+
+            if (user_id != "")
+            {
+                fetch('http://127.0.0.1:8000/api/datadiri/' + user_id)
+                    .then(async (response) => {
+                        let data = await response.json()
+                        this.isExisted = data.status
+                })
+            }
+        }
+    })
+    
     Alpine.store('login', {
         'baseUrl': window.location.origin,
         'isLoggedIn': false,
