@@ -22,7 +22,13 @@
                 Halaman ini berisi hasil seleksi Penerimaan Peserta Didik Baru SMAN 11 Bekasi Periode 2023 / 2024.
             </p>
         </div>
-        @livewire('halaman-pendaftaran.detail-pendaftar')
+        <div x-show="$store.login.isLoggedIn" x-init="$store.dataDiri.getDataDiri()">
+            <template x-if="$store.dataDiri.isExisted">
+                <div x-data="$store.pendaftar" x-init="getDetailPendaftar(localStorage.getItem('user_id'))">
+                    @livewire('halaman-pendaftaran.detail-pendaftar')
+                </div>
+            </template>
+        </div>
         @livewire('login')
         @livewire('registrasi')
     </div>
