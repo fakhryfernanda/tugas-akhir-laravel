@@ -1,4 +1,9 @@
-<div class="flex justify-between">
+<div 
+    x-data="$store.pendaftar"
+    x-init="getDetailPendaftar('user');" 
+    class="flex justify-between"
+>
+
     {{-- Foto --}}
     <div class="w-fit h-fit p-2 bg-white rounded-md shadow-md border border-slate-300">
         <img src="https://images.unsplash.com/photo-1597895386990-a5b1d51690e1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&ixid=MnwxfDB8MXxyYW5kb218MHx8bWFsZXx8fHx8fDE2NzI1Njc3NTk&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" width="200" alt="foto-pendaftar">
@@ -12,51 +17,54 @@
                 <div class="">
                     <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px] flex-shrink-0">Nama Lengkap</div>
-                        <div class="w-[200px]">Muhamad Fakhry Fernanda</div>
+                        <div class="w-[200px]" x-text="detail.nama_lengkap"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Jenis Kelamin</div>
-                        <div class="w-[200px]">Laki-laki</div>
+                        <div class="w-[200px]" x-text="detail.jenis_kelamin == 'L' ? 'Laki-laki' : 'Perempuan'"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">NISN</div>
-                        <div class="w-[200px]">1516232000</div>
+                        <div class="w-[200px]" x-text="detail.nisn"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Tempat Lahir</div>
-                        <div class="w-[200px]">Kota Bekasi</div>
+                        <div class="w-[200px]" x-text="detail.tempat_lahir"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Tanggal Lahir</div>
-                        <div class="w-[200px]">23 Maret 2006</div>
+                        <div class="w-[200px]" x-text="detail.tanggal_lahir"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Tinggi Badan</div>
-                        <div class="w-[200px]">145 cm</div>
+                        <div class="w-[200px]" x-text="detail.tinggi_badan + ' cm'"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Berat Badan</div>
-                        <div class="w-[200px]">45 kg</div>
+                        <div class="w-[200px]" x-text="detail.berat_badan + ' kg'"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Agama</div>
-                        <div class="w-[200px]">Islam</div>
+                        <div class="w-[200px] capitalize" x-text="detail.agama"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Kewarganegaraan</div>
-                        <div class="w-[200px]">Warga Negara Indonesia</div>
+                        <div 
+                            class="w-[200px]" 
+                            x-text="detail.kewarganegaraan == 'wni' ? 'Warga Negara Indonesia' : 'Warga Negara Asing'"
+                        ></div>
                     </div>
                     <div class="py-1 px-2 bg-[#ffffff] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Nomor Handphone</div>
-                        <div class="w-[200px]">08813096322</div>
+                        <div class="w-[200px]" x-text="detail.nomor_handphone"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#f9f9f9] border-b border-slate-400 flex gap-4">
                         <div class="font-bold w-[200px]">Email</div>
-                        <div class="w-[200px]">mff023@gmail.com</div>
+                        <div class="w-[200px]" x-text="detail.email"></div>
                     </div>
                     <div class="py-1 px-2 bg-[#ffffff] flex gap-4 rounded-b-md">
                         <div class="font-bold w-[200px]">Jumlah Saudara Kandung</div>
-                        <div class="w-[200px]">1</div>
+                        <div class="w-[200px]" x-text="detail.jumlah_saudara_kandung"></div>
                     </div>
                 </div>
             </div>
