@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/e0f8177fe6.js" crossorigin="anonymous"></script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    @livewireStyles
 </head>
 <body class="bg-[#F4F4F4] flex">
     <section class="w-1/5 h-screen bg-[#1D459E] pt-8">
@@ -24,18 +25,19 @@
             </div>
             <div class="text-lg flex items-center gap-4">
                 <i class="fa-solid fa-school block w-[20px]"></i>
-                <a href="/admin">Data Sekolah Pendaftar</a>
+                <a href="/admin/sekolah">Data Sekolah Pendaftar</a>
             </div>
             <div class="text-lg flex items-center gap-4">
                 <i class="fa-solid fa-gear block w-[20px]"></i>
-                <a href="/admin">Pengaturan Sistem</a>
+                <a href="/admin/pengaturan">Pengaturan Sistem</a>
             </div>
         </div>
     </section>
-    <section class="h-screen overflow-y-auto p-8">
-        @livewire('admin.data-pendaftar')
-    </section>
+    
+    {{ $slot }}
 
+    @livewireScripts
+    <script src="{{ URL::to('js/admin.js') }}"></script>
     <script src="{{ URL::to('js/data-pendaftar.js') }}"></script>
 </body>
 </html>
