@@ -49,8 +49,17 @@
 
             {{-- Content --}}
             <form action="" method="post" id="formulir" wire:submit.prevent="submit" enctype="multipart/form-data">
+                
                 {{-- Data Awal --}}
                 <div x-show.transition.in="step === 1" class="flex flex-col gap-3">
+                    {{-- Id User --}}
+                    <div class="flex items-center">
+                        <label for="id_akun" class="block w-[800px]">Id Akun</label>
+                        <select wire:model="id_akun" name="id_akun" id="id_akun" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                            <option value="">Pilih :</option>
+                            <option :value="$store.login.getActiveUserId()" x-text="$store.login.getActiveUserId()"></option>
+                        </select>
+                    </div>
                     <div class="flex items-center">
                         <label for="jalur" class="block w-[800px]">Jalur Pendaftaran</label>
                         <select wire:model="jalur" name="jalur" id="jalur" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
