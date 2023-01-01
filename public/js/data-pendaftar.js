@@ -3,6 +3,7 @@ document.addEventListener('alpine:init', () => {
     Alpine.store('pendaftar', {
         data: null,
         detail: null,
+        isLoading: true,
 
         async sortByKey(array, key)
         {
@@ -19,19 +20,16 @@ document.addEventListener('alpine:init', () => {
                 .then(async (response) => {
                     this.data = await response.json()
                     this.data = this.data.data
+                    this.isLoading = false
             })
         },
 
-        getDetailPendaftar(location) {
-            if (location == 'user') {
-                const user_id = localStorage.getItem('user_id')
-                
-                fetch('http://127.0.0.1:8000/api/pendaftar/detail/' + user_id)
-                    .then(async (response) => {
-                        this.detail = await response.json()
-                        this.detail = this.detail.data
-                })
-            }
+        getDetailPendaftar(id) {
+            fetch('http://127.0.0.1:8000/api/pendaftar/detail/' + id)
+                .then(async (response) => {
+                    this.detail = await response.json()
+                    this.detail = this.detail.data
+            })
 
         }
     })
