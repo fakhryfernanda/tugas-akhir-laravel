@@ -15,6 +15,12 @@ document.addEventListener('alpine:init', () => {
             this.isLoggedIn ? console.log('Sudah masuk') : console.log('Belum masuk')
         },
 
+        logout() {
+            localStorage.setItem('token', '')
+            this.token = null
+            window.location.replace(window.location.href)
+        },
+
         async fetchLogin() {
             if (this.nomor_pendaftaran != null && this.password != null) {
                 // fetch api
@@ -36,7 +42,7 @@ document.addEventListener('alpine:init', () => {
 
                 this.isLoggedIn = true
                 localStorage.setItem('token', this.token)
-                window.location.replace(this.baseUrl + '/formulir')
+                window.location.replace(this.baseUrl + '/ppdb/formulir')
 
             }
         }
