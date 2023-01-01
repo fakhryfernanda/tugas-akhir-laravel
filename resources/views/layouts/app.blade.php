@@ -19,7 +19,7 @@
             <div class="flex items-center">
                 <div class="mr-32 flex items-center gap-3">
                     <img src="images/logo-11.jpg" alt="logo" width="40" class="inline">
-                    <span class="text-2xl font-bold text-white">Ini Pake Livewire</span>
+                    <span class="text-2xl font-bold text-white">SMAN 11 Kota Bekasi</span>
                 </div>
                 <nav>
                     <ul class="flex gap-5">
