@@ -1,23 +1,8 @@
 <div x-show="login.isLoggedIn">
     <h1 class="text-3xl font-semibold mb-5">FORMULIR PAKE LIVEWIRE</h1>
     <div x-data="app()">
-        <div x-show.transition="step === 'complete'" class="p-10 text-center bg-white rounded-lg shadow">
-            <i class="fa-solid fa-circle-check text-[72px] text-green-500"></i>
-            <h2 class="text-2xl mb-4 text-gray-800 text-center font-bold">Pendaftaran Berhasil</h2>
 
-            <p class="text-gray-600">
-                Terima kasih sudah mendaftar. Data akan diverifikasi oleh petugas.
-            </p>
-            <p class="text-gray-600 mb-8">
-                Pengumuman hasil PPDB dapat diakses pada <span class="font-semibold text-blue-400">16 Januari 2023</span>
-            </p>
-
-            <a href="/ppdb/hasil"
-                class="w-fit block mx-auto py-2 px-5 rounded-lg shadow-sm text-center text-gray-600 bg-white hover:bg-gray-100 font-medium border" 
-            >Lihat Data Pendaftaran</a>
-        </div>
-
-        <div x-show.transition="step != 'complete'" class="py-6 px-8 bg-white border">
+        <div class="py-6 px-8 bg-white border">
             <!-- Top Navigation -->
             <div class="border-b-2 py-4 mb-12">
                 <div class="uppercase text-xs font-bold text-gray-500 mb-1" x-text="`Step: ${step} of ${totalStep}`"></div>
@@ -64,6 +49,7 @@
 
             {{-- Content --}}
             <form action="" method="post" id="formulir" wire:submit.prevent="submit" enctype="multipart/form-data">
+                {{-- Data Awal --}}
                 <div x-show.transition.in="step === 1" class="flex flex-col gap-3">
                     <div class="flex items-center">
                         <label for="jalur" class="block w-[800px]">Jalur Pendaftaran</label>
@@ -98,6 +84,8 @@
                     </div>
                     @error('nomor_ijazah') <span class="text-red-500">{{ $message }}</span> @enderror
                 </div>
+
+                {{-- Data Diri --}}
                 <div x-show.transition.in="step === 2" class="flex flex-col gap-3">
                     <div class="flex items-center">
                         <label for="nama_lengkap" class="block w-[800px]">Nama Lengkap</label>
@@ -106,7 +94,7 @@
                     @error('nama_lengkap') <span class="text-red-500">{{ $message }}</span> @enderror
                     <div class="flex items-center">
                         <label for="jenis_kelamin" class="block w-[800px]">Jenis Kelamin</label>
-                        <select name="jenis_kelamin" id="jenis_kelamin" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
+                        <select wire:model="jenis_kelamin" name="jenis_kelamin" id="jenis_kelamin" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                             <option value="">Pilih :</option>
                             <option value="L">Laki-laki</option>
                             <option value="P">Perempuan</option>
@@ -185,6 +173,8 @@
                     </div>
                     @error('foto') <span class="text-red-500">{{ $message }}</span> @enderror
                 </div>
+
+                {{-- Data Alamat --}}
                 <div x-show.transition.in="step === 3" class="flex flex-col gap-3">
                     <div class="flex items-center">
                         <label for="alamat_jalan" class="block w-[800px] self-start">Alamat Jalan</label>
@@ -211,6 +201,8 @@
                         <input wire:model="kode_pos" type="text" id="kode_pos" name="kode_pos" class="w-full px-2 py-1 border border-black/20 outline outline-[3.5px] outline-transparent focus:outline-sky-300">
                     </div>
                 </div>
+
+                {{-- Berkas Pendukung --}}
                 <div x-show.transition.in="step === 4" class="flex flex-col gap-3">
                     <div class="flex items-center">
                         <label for="kis" class="block w-[800px]">Nomor Kartu Indonesia Sehat (KIS)</label>
@@ -233,6 +225,8 @@
                     </div>
                     @error('sktm') <span class="text-red-500">{{ $message }}</span> @enderror
                 </div>
+
+                {{-- Data Orang Tua --}}
                 <div x-show.transition.in="step === 5" class="flex flex-col gap-3">
                     {{-- Ayah --}}
                     <p class="text-lg font-semibold">Ayah</p>
@@ -411,6 +405,8 @@
                     </div>
                     @error('penghasilan_bulanan_wali') <span class="text-red-500">{{ $message }}</span> @enderror
                 </div>
+
+                {{-- Nilai rapor --}}
                 <div x-show.transition.in="step === 6" class="flex flex-col gap-3">
                     <p class="text-lg font-semibold">Semester 1</p>
                     <div class="flex items-center">
@@ -547,6 +543,8 @@
                     </div>
                     @error('ips_5') <span class="text-red-500">{{ $message }}</span> @enderror
                 </div>
+
+                {{-- Pernyataan --}}
                 <div x-show.transition.in="step === 7" class="flex flex-col gap-3">
                     <div class="w-full">
                         <p class="text-lg">
@@ -557,13 +555,18 @@
                             <label for="pernyataan" class="font-semibold">Saya setuju</label>
                         </div>
                     </div>
+                    @if (session()->has('formError'))
+                    <div>
+                        <p class="text-red-600 font-semibold">{{ session('formError') }}</p>
+                    </div>
+                    @endif
                 </div>
             </form>
             {{-- Content --}}
         </div>
 
         <!-- Bottom Navigation -->
-        <div x-show="step != 'complete'" class="py-4 px-8 bg-[#F7F7F7] border border-t-slate-300">
+        <div class="py-4 px-8 bg-[#F7F7F7] border border-t-slate-300">
             <div class="flex justify-between" x-show="step != 'complete'">
                 <div class="w-1/2">
                     <button
@@ -583,10 +586,9 @@
                     <input
                         type="submit"
                         form="formulir"
-                        {{-- @click="step = 'complete'" --}}
                         x-show="step === totalStep"
                         class="w-32 focus:outline-none cursor-pointer border border-transparent py-2 px-5 rounded-lg shadow-sm text-center text-white bg-blue-500 hover:bg-blue-600 font-medium"
-                        value="Simpan"
+                        value="Submit"
                     >
                 </div>
             </div>
