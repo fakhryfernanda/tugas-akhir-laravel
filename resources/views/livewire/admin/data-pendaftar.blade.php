@@ -2,7 +2,7 @@
 
 <div 
     x-data="$store.pendaftar"
-    x-init="getDataPendaftar(); hello()"
+    x-init="getDataPendaftar();"
 >
     
     <template x-if="data != null">
@@ -20,15 +20,15 @@
             </tr>
         </thead>
         <tbody>                
-            <template x-for="(row, index) in data.data_diri">
+            <template x-for="(row, index) in data">
                 <tr class="text-center">
                     <td x-text="row.id" class="py-2 px-4"></td>
                     <td x-text="row.nisn" class="py-2 px-4"></td>
                     <td x-text="row.nama_lengkap" class="py-2 px-4"></td>
                     <td x-text="row.jenis_kelamin" class="py-2 px-4"></td>
                     <td x-text="row.tanggal_lahir" class="py-2 px-4"></td>
-                    <td x-text="data.data_awal[index].sekolah_asal" class="py-2 px-4"></td>
-                    <td x-text="data.nilai_rapor[index].mean" class="py-2 px-4"></td>
+                    <td x-text="row.sekolah_asal" class="py-2 px-4"></td>
+                    <td x-text="row.mean" class="py-2 px-4"></td>
                     <td class="py-2 px-4">
                         <i class="fa-solid fa-xmark text-red-500"></i>
                     </td>
