@@ -2,7 +2,7 @@
 
     {{-- Foto --}}
     <div class="w-fit h-fit p-2 bg-white rounded-md shadow-md border border-slate-300">
-        <img src="https://images.unsplash.com/photo-1597895386990-a5b1d51690e1?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=800&ixid=MnwxfDB8MXxyYW5kb218MHx8bWFsZXx8fHx8fDE2NzI1Njc3NTk&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" width="200" alt="foto-pendaftar">
+        <img :src="detail.foto" width="200" alt="foto-pendaftar">
     </div>
 
     <div class="flex flex-col">
