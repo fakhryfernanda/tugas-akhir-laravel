@@ -74,7 +74,7 @@
                             <tbody class="w-full">
                                 <tr class="text-left bg-[#f9f9f9] border-b border-slate-400">
                                     <th class="px-2">Jalan</th>
-                                    <td class="px-2" x-text="detail.alamat_jalan"></td>
+                                    <td class="w-full px-2" x-text="detail.alamat_jalan"></td>
                                 </tr>
                                 <tr class="text-left bg-[#ffffff] border-b border-slate-400">
                                     <th class="px-2">Kelurahan</th>
