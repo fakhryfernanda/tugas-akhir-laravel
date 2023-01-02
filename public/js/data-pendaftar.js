@@ -3,7 +3,6 @@ document.addEventListener('alpine:init', () => {
     Alpine.store('pendaftar', {
         data: null,
         detail: null,
-        isLoading: true,
 
         async sortByKey(array, key)
         {
@@ -20,7 +19,6 @@ document.addEventListener('alpine:init', () => {
                 .then(async (response) => {
                     this.data = await response.json()
                     this.data = this.data.data
-                    this.isLoading = false
             })
         },
 
