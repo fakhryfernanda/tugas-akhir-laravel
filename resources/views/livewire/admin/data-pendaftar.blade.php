@@ -5,38 +5,40 @@
     >
         <div x-show="$store.admin.openTable">
             <div>
-                <template x-if="data != null && !isLoading">
+                <template x-if="data != null">
                 <table class="bg-white">
                     <thead>
                         <tr class="bg-sky-600 text-white">
-                            <th class="py-2 px-4">Nomor Urut</th>
-                            <th class="py-2 px-4">NISN</th>
-                            <th class="py-2 px-4">Nama Lengkap</th>
-                            <th class="py-2 px-4">Jenis Kelamin</th>
-                            <th class="py-2 px-4">Tanggal Lahir</th>
-                            <th class="py-2 px-4">Asal Sekolah</th>
-                            <th class="py-2 px-4">Rata-Rata Nilai</th>
-                            <th class="py-2 px-4"></th>
-                            {{-- <th class="py-2 px-4">Terverifikasi</th> --}}
+                            <th class="py-2 px-2">Nomor Urut</th>
+                            <th class="py-2 px-2">NISN</th>
+                            <th class="py-2 px-2">Nama Lengkap</th>
+                            <th class="py-2 px-2">Jenis Kelamin</th>
+                            <th class="py-2 px-2">Tanggal Lahir</th>
+                            <th class="py-2 px-2">Asal Sekolah</th>
+                            <th class="py-2 px-2">Rata-Rata Nilai</th>
+                            <th class="py-2 px-2">Status Kelolosan</th>
+                            <th class="py-2 px-2"></th>
+                            {{-- <th class="py-2 px-2">Terverifikasi</th> --}}
                         </tr>
                     </thead>
                     <tbody>                
                         <template x-for="(row, index) in data">
                             <tr class="text-center">
-                                <td x-text="row.id" class="py-2 px-4"></td>
-                                <td x-text="row.nisn" class="py-2 px-4"></td>
-                                <td x-text="row.nama_lengkap" class="py-2 px-4"></td>
-                                <td x-text="row.jenis_kelamin" class="py-2 px-4"></td>
-                                <td x-text="row.tanggal_lahir" class="py-2 px-4"></td>
-                                <td x-text="row.sekolah_asal" class="py-2 px-4"></td>
-                                <td x-text="row.mean" class="py-2 px-4"></td>
-                                <td class="py-2 px-4">
+                                <td x-text="row.id" class="py-2 px-2"></td>
+                                <td x-text="row.nisn" class="py-2 px-2"></td>
+                                <td x-text="row.nama_lengkap" class="py-2 px-2"></td>
+                                <td x-text="row.jenis_kelamin" class="py-2 px-2"></td>
+                                <td x-text="row.tanggal_lahir" class="py-2 px-2"></td>
+                                <td x-text="row.sekolah_asal" class="py-2 px-2"></td>
+                                <td x-text="row.mean" class="py-2 px-2"></td>
+                                <td x-text="index <= 10 ? 'Lolos' : 'Tidak Lolos'" class="py-2 px-2"></td>
+                                <td class="py-2 px-2">
                                     <button 
-                                        @click="$store.admin.openTable = false; $store.admin.openDetail = true; $store.admin.setIdAkun(row.id_akun); detail = row; console.log(detail)"
+                                        @click="$store.admin.openTable = false; $store.admin.openDetail = true; $store.admin.setIdAkun(row.id_akun); detail = row;"
                                     >Detail</button>
                                 </td>
             
-                                {{-- <td class="py-2 px-4">
+                                {{-- <td class="py-2 px-2">
                                     <i class="fa-solid fa-xmark text-red-500"></i>
                                 </td> --}}
                             </tr>
@@ -52,8 +54,10 @@
             
             </div>
         </div>
-        <div x-cloak x-show="$store.admin.openDetail">
-            @livewire('halaman-pendaftaran.detail-pendaftar')
+        <div x-cloak>
+            <template x-if="$store.admin.openDetail">
+                @livewire('halaman-pendaftaran.detail-pendaftar')
+            </template>
         </div>
     </div>
 </section>
