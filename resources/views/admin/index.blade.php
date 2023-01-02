@@ -23,14 +23,14 @@
                 <i class="fa-solid fa-people-group block w-[20px]"></i>
                 <a href="/admin">Data Pendaftar</a>
             </div>
-            <div class="text-lg flex items-center gap-4">
+            {{-- <div class="text-lg flex items-center gap-4">
                 <i class="fa-solid fa-school block w-[20px]"></i>
                 <a href="/admin/sekolah">Data Sekolah Pendaftar</a>
             </div>
             <div class="text-lg flex items-center gap-4">
                 <i class="fa-solid fa-gear block w-[20px]"></i>
                 <a href="/admin/pengaturan">Pengaturan Sistem</a>
-            </div>
+            </div> --}}
         </div>
     </section>
     
